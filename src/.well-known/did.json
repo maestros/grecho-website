@@ -1,0 +1,48 @@
+{
+  "id": "did:web:www.grecho.site",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:www.grecho.site"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://www.grecho.site/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/8f466d89-2352-420b-8f08-79a3331d31d0"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#768ac16f14954c19bafcf06306068f2avcSigningKey-f2591",
+      "controller": "did:web:www.grecho.site",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "2f4uQYGQ1uhnulqoa_LxwsGPH9FqSRBvyk5Bvqe20QU",
+        "y": "S6lLtrnLsPe0T-UPM7DunUNJTVgaZ1c0bn3m83IS95U"
+      }
+    }
+  ],
+  "authentication": [
+    "#768ac16f14954c19bafcf06306068f2avcSigningKey-f2591"
+  ],
+  "assertionMethod": [
+    "#768ac16f14954c19bafcf06306068f2avcSigningKey-f2591"
+  ]
+}
